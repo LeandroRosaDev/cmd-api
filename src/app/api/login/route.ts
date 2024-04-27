@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
   const body = (await request.json()) as { username: string; password: string };
 
   const response = await fetch(
-    "https://api.komodemoveis.com.br/wp-json/jwt-auth/v1/token",
+    "https://apikomode.altuori.com/wp-json/jwt-auth/v1/token",
     {
       cache: "no-store",
       method: "POST",

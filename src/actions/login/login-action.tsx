@@ -8,7 +8,7 @@ export async function loginAction(formData: FormData) {
     password: formData.get("password") as string,
   };
   const response = await fetch(
-    "https://api.komodemoveis.com.br/wp-json/jwt-auth/v1/token",
+    "https://apikomode.altuori.com/wp-json/jwt-auth/v1/token",
     {
       method: "POST",
       headers: {

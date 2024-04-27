@@ -5,7 +5,7 @@ import { revalidatePath } from "next/cache";
 export async function adicionarProdutoAction(formData: FormData) {
   const token = cookies().get("token")?.value;
   const response = await fetch(
-    "https://api.komodemoveis.com.br/wp-json/api/produto",
+    "https://apikomode.altuori.com/wp-json/api/produto",
     {
       method: "POST",
       headers: {

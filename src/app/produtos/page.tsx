@@ -12,12 +12,18 @@ export default function ProdutosPage() {
       const { data } = await getProductsAction();
       setProdutos(data);
     }
-
     loadProducts();
   }, []);
 
   function handleDelete(produtoNome: string) {
-    const formattedName = produtoNome.replace(/\s+/g, "-");
+    const formattedName = produtoNome
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9\s]/gi, "")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-");
+
     removerProdutoAction(formattedName);
     window.location.reload();
   }

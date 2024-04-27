@@ -18,6 +18,12 @@ export async function loginAction(formData: FormData) {
     }
   );
   const data = await response.json();
-  cookies().set("token", data.token);
+  const expirationTime = new Date();
+  expirationTime.setMinutes(expirationTime.getMinutes() + 30);
+  cookies().set("token", data.token, {
+    secure: true,
+    httpOnly: true,
+    expires: expirationTime,
+  });
   redirect("/");
 }

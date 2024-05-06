@@ -95,6 +95,18 @@ export default function AdicionarProduto() {
         <option value="Bege Claro">Bege Claro</option>
         <option value="Cinza Claro">Cinza Claro</option>
       </select>
+      <input
+        type="text"
+        id="link_1"
+        name="link_1"
+        placeholder="Whatsapp Link"
+      />
+      <input
+        type="text"
+        id="link_2"
+        name="link_2"
+        placeholder="Link Opcional"
+      />
       {categoriaSelecionada == "Sofá" && (
         <>
           <input

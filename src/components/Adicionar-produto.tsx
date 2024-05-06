@@ -23,6 +23,8 @@ export default function AdicionarProduto() {
     formData.append("altura", event.currentTarget.altura.value);
     formData.append("largura", event.currentTarget.largura.value);
     formData.append("cor", event.currentTarget.cor.value);
+    formData.append("link_1", event.currentTarget.link_1.value);
+    formData.append("link_2", event.currentTarget.link_2.value);
 
     if (categoriaSelecionada == "Sofá") {
       formData.append("assento", event.currentTarget.assento.value);

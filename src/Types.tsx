@@ -19,7 +19,11 @@ export type Produto = {
   nome: string;
   nome_long: string;
   preco: string;
+  cor: string;
   categoria?: string;
+  produto_cod?: string;
+  link_1?: string;
+  link_2?: string;
   descricao?: string;
   altura?: string;
   largura?: string;

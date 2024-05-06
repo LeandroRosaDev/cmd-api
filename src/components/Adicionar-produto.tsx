@@ -30,6 +30,7 @@ export default function AdicionarProduto() {
       formData.append("assento", event.currentTarget.assento.value);
       formData.append("encosto", event.currentTarget.encosto.value);
       formData.append("braco", event.currentTarget.braco.value);
+      formData.append("estrutura", event.currentTarget.estrutura.value);
       formData.append("revestimento", event.currentTarget.revestimento.value);
       formData.append(
         "profundidade_aberto",
@@ -45,21 +46,21 @@ export default function AdicionarProduto() {
 
   return (
     <form onSubmit={handleSubmit} className={style.form}>
-      <input type="text" id="nome" name="nome" placeholder="Nome do Produto" />
-
-      <input
-        type="text"
-        id="nome_long"
-        name="nome_long"
-        placeholder="Nome Longo"
-      />
+      <input type="text" id="nome" name="nome" placeholder="Cód do Produto" />
 
       <input
         type="text"
         id="produto_cod"
         name="produto_cod"
-        placeholder="Cód do Produto"
+        placeholder="Nome do Produto"
       />
+      <input
+        type="text"
+        id="nome_long"
+        name="nome_long"
+        placeholder="Nome longo do Produto"
+      />
+
       <select
         id="categoria"
         name="categoria"
@@ -138,6 +139,12 @@ export default function AdicionarProduto() {
           />
 
           <input type="text" id="braco" name="braco" placeholder="Braços" />
+          <input
+            type="text"
+            id="estrutura"
+            name="estrutura"
+            placeholder="Estrutura"
+          />
 
           <input
             type="text"

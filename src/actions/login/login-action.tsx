@@ -19,7 +19,7 @@ export async function loginAction(formData: FormData) {
   );
   const data = await response.json();
   const expirationTime = new Date();
-  expirationTime.setMinutes(expirationTime.getMinutes() + 30);
+  expirationTime.setMinutes(expirationTime.getMinutes() + 60);
   cookies().set("token", data.token, {
     secure: true,
     httpOnly: true,

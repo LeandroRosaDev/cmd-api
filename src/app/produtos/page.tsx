@@ -16,17 +16,8 @@ export default function ProdutosPage() {
     loadProducts();
   }, []);
 
-  function handleDelete(produtoNome: string) {
-    const formattedName = produtoNome
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z0-9\s-]/gi, "")
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, "-");
-
-    removerProdutoAction(formattedName);
-
+  function handleDelete(produtoNome: any) {
+    removerProdutoAction(produtoNome);
     window.location.reload();
   }
 
@@ -57,7 +48,7 @@ export default function ProdutosPage() {
             </button>
             <button
               style={{ color: "white" }}
-              onClick={() => handleDelete(produto.nome)}
+              onClick={() => handleDelete(produto.id)}
             >
               Deletar
             </button>

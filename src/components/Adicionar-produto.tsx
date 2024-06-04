@@ -31,17 +31,17 @@ export default function AdicionarProduto() {
     formData.append("cor", event.currentTarget.cor.value);
     formData.append("link_1", event.currentTarget.link_1.value);
     formData.append("link_2", event.currentTarget.link_2.value);
+    formData.append(
+      "profundidade_aberto",
+      event.currentTarget.profundidade_aberto.value
+    );
+    formData.append("estrutura", event.currentTarget.estrutura.value);
 
     if (subcategoriaSelecionada == "Sofa Retratil") {
       formData.append("assento", event.currentTarget.assento.value);
       formData.append("encosto", event.currentTarget.encosto.value);
       formData.append("braco", event.currentTarget.braco.value);
-      formData.append("estrutura", event.currentTarget.estrutura.value);
       formData.append("revestimento", event.currentTarget.revestimento.value);
-      formData.append(
-        "profundidade_aberto",
-        event.currentTarget.profundidade_aberto.value
-      );
       formData.append(
         "profundidade_fechado",
         event.currentTarget.profundidade_fechado.value
@@ -123,13 +123,13 @@ export default function AdicionarProduto() {
         {categoriaSelecionada == "Quarto de casal" && (
           <>
             <option value="Cama de Casal">Cama de Casal</option>
-            <option value="Guarda Roupa Casal">Cama de Casal</option>
+            <option value="Guarda Roupa Casal">Guarda Roupa Casal</option>
           </>
         )}
         {categoriaSelecionada == "Quarto de solteiro" && (
           <>
             <option value="Cama de Solteiro">Cama de Solteiro</option>
-            <option value="Guarda Roupa Solteiro">Cama de Solteiro</option>
+            <option value="Guarda Roupa Solteiro">Guarda Roupa Solteiro</option>
           </>
         )}
         {categoriaSelecionada == "Escritório" && (
@@ -150,6 +150,12 @@ export default function AdicionarProduto() {
         name="descricao"
         placeholder="Descrição"
       />
+      <input
+        type="text"
+        id="profundidade_aberto"
+        name="profundidade_aberto"
+        placeholder="Profundidade/Profundidade Aberto (Retrátil)"
+      />
       <select
         id="rangedevalor"
         name="rangedevalor"
@@ -166,9 +172,27 @@ export default function AdicionarProduto() {
         <option value="3999">Menor de R$4000,00</option>
         <option value="4999">Menor de R$5000,00</option>
       </select>
+      <input
+        type="text"
+        id="preco_original"
+        name="preco_original"
+        placeholder="Preço Riscado"
+      />
+      <input
+        type="text"
+        id="preco_parcelado"
+        name="preco_parcelado"
+        placeholder="Preço em 10x"
+      />
       <input type="text" id="preco" name="preco" placeholder="Preço" />
       <input type="text" id="altura" name="altura" placeholder="Altura" />
       <input type="text" id="largura" name="largura" placeholder="Largura" />
+      <input
+        type="text"
+        id="estrutura"
+        name="estrutura"
+        placeholder="Estrutura/Características"
+      />
       <select id="cor" name="cor">
         <option value="">Cor</option>
         <option value="Azul">Azul</option>
@@ -186,8 +210,9 @@ export default function AdicionarProduto() {
         <option value="Cinza Claro">Cinza Claro</option>
         <option value="Amarelo">Amarelo</option>
         <option value="Branco">Branco</option>
-        <option value="Off white">off white</option>
+        <option value="Off white">Off white</option>
         <option value="Capuccino">Capuccino</option>
+        <option value="Cinza/Grafite">Cinza/Grafite</option>
       </select>
       <input
         type="text"
@@ -211,12 +236,6 @@ export default function AdicionarProduto() {
           />
           <input
             type="text"
-            id="profundidade_aberto"
-            name="profundidade_aberto"
-            placeholder="Profundidade aberto"
-          />
-          <input
-            type="text"
             id="assento"
             name="assento"
             placeholder="Assento"
@@ -230,13 +249,6 @@ export default function AdicionarProduto() {
           />
 
           <input type="text" id="braco" name="braco" placeholder="Braços" />
-          <input
-            type="text"
-            id="estrutura"
-            name="estrutura"
-            placeholder="Estrutura"
-          />
-
           <input
             type="text"
             id="revestimento"

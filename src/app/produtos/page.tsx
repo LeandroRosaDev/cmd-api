@@ -27,7 +27,7 @@ export default function ProdutosPage() {
       <ul>
         {produtos.map((produto) => (
           <li key={produto.id}>
-            {produto.produto_cod} Cód: {produto.nome} : R$ {produto.preco}
+            {produto.nome} : R$ {produto.preco}
             {produto.fotos && produto.fotos.length > 0 && (
               <Image
                 src={produto.fotos[1].src}
@@ -36,7 +36,9 @@ export default function ProdutosPage() {
                 height={100}
               />
             )}
-            {produto.nome_long}
+            <li style={{ width: "500px" }}>{produto.situacao}</li>
+            <li style={{ width: "500px" }}>{produto.categoria}</li>
+            <li style={{ width: "500px" }}>{produto.sub_categoria}</li>
             <button>
               <a
                 target="_blank"

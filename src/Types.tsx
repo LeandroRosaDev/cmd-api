@@ -38,4 +38,6 @@ export type Produto = {
   usuario_id?: string;
   fotos?: any;
   img?: File[];
+  situacao?: string;
+  sub_categoria?: string;
 };

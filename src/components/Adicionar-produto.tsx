@@ -172,6 +172,7 @@ export default function AdicionarProduto() {
         <option value="3999">Menor de R$4000,00</option>
         <option value="4999">Menor de R$5000,00</option>
       </select>
+      <input type="text" id="preco" name="preco" placeholder="Preço" />
       <input
         type="text"
         id="preco_original"
@@ -184,7 +185,6 @@ export default function AdicionarProduto() {
         name="preco_parcelado"
         placeholder="Preço em 10x"
       />
-      <input type="text" id="preco" name="preco" placeholder="Preço" />
       <input type="text" id="altura" name="altura" placeholder="Altura" />
       <input type="text" id="largura" name="largura" placeholder="Largura" />
       <input

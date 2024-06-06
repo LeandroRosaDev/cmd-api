@@ -1,6 +1,7 @@
 import { Conta } from "@/Types";
 import { userGetAction } from "@/actions/user/user-get-action";
 import Link from "next/link";
+import { ButtonBack } from "./ButtonBack";
 
 export default async function Menu() {
   const { data } = await userGetAction();
@@ -19,22 +20,13 @@ export default async function Menu() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          {conta.autorizado ? data.nome : <Link href="/login">Login</Link>}
-        </li>
-        <li>
           {conta.autorizado ? (
             <Link href="/produtos"> Produtos </Link>
           ) : (
             <p></p>
           )}
         </li>
-        <li>
-          {conta.autorizado ? (
-            <Link href="/produtos/adicionar"> Adicionar Produtos </Link>
-          ) : (
-            <p></p>
-          )}
-        </li>
+        <ButtonBack>Voltar</ButtonBack>
       </ul>
     </>
   );

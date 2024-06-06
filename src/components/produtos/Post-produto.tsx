@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
-import { adicionarProdutoAction } from "@/actions/products/adicionar-produto-action";
-import { Button } from "./Button";
+import { Button } from "../Button";
 import style from "./Adicionar-produto.module.css";
-export default function AdicionarProduto() {
+import { postProdutosAction } from "@/actions/products/post-produtos-action";
+import { ButtonBack } from "../ButtonBack";
+
+export default function PostProduto() {
   const [situacao, setSituacao] = useState("");
   const [rangedevalor, setRangedevalor] = useState("");
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("");
@@ -32,6 +34,10 @@ export default function AdicionarProduto() {
     formData.append("link_1", event.currentTarget.link_1.value);
     formData.append("link_2", event.currentTarget.link_2.value);
     formData.append(
+      "disponibilidade",
+      event.currentTarget.disponibilidade.value
+    );
+    formData.append(
       "profundidade_aberto",
       event.currentTarget.profundidade_aberto.value
     );
@@ -47,7 +53,7 @@ export default function AdicionarProduto() {
         event.currentTarget.profundidade_fechado.value
       );
     }
-    await adicionarProdutoAction(formData);
+    await postProdutosAction(formData);
   }
 
   return (
@@ -257,8 +263,16 @@ export default function AdicionarProduto() {
           />
         </>
       )}
+      <input
+        type="hidden"
+        id="disponibilidade"
+        name="disponibilidade"
+        placeholder="Disponibilidade"
+        value="sim"
+      />
       <input type="file" name="img" id="img" multiple />
       <Button>Adicionar</Button>
+      <ButtonBack>Retornar</ButtonBack>
     </form>
   );
 }

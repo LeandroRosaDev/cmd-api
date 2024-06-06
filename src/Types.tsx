@@ -40,4 +40,12 @@ export type Produto = {
   img?: File[];
   situacao?: string;
   sub_categoria?: string;
+  disponibilidade?: string;
+};
+export type PageParams = {
+  params: {
+    produto: string;
+    categorias: string;
+    subcategorias: string;
+  };
 };

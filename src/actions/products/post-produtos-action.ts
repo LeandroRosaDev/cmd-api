@@ -1,19 +1,24 @@
 "use server";
-
 import { cookies } from "next/headers";
+import { revalidatePath } from "next/cache";
 
-export async function getProdutosAction() {
+export async function postProdutosAction(formData: FormData) {
   const token = cookies().get("token")?.value;
   const response = await fetch(
     "https://apikomode.altuori.com/wp-json/api/produto",
+
     {
-      cache: "no-store",
+      next: {
+        revalidate: 1,
+      },
+      method: "POST",
       headers: {
         Authorization: "Bearer" + token,
       },
+      body: formData,
     }
   );
-  const data = await response.json();
+  await response.json();
 
-  return { data };
+  revalidatePath("/produtos");
 }

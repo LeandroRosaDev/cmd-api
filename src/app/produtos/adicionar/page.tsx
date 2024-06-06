@@ -1,10 +1,10 @@
-import AdicionarProduto from "@/components/Adicionar-produto";
+import PostProduto from "@/components/produtos/Post-produto";
 
-export default async function AdicionarProdutosPage() {
+export default async function PostProdutosPage() {
   return (
     <main>
       <h1>Adicionar Produtos</h1>
-      <AdicionarProduto />
+      <PostProduto />
     </main>
   );
 }

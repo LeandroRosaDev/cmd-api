@@ -213,10 +213,10 @@ export default function PostProduto() {
         <option value="Marrom">Marrom</option>
         <option value="Terracota">Terracota</option>
         <option value="Verde">Verde</option>
-        <option value="Begê">Bege</option>
+        <option value="Bege">Bege</option>
         <option value="Rosa Escuro">Rosa Escuro</option>
         <option value="Vinho">Vinho</option>
-        <option value="Rose">Rosê</option>
+        <option value="Rose">Rose</option>
         <option value="Bege Claro">Bege Claro</option>
         <option value="Cinza Claro">Cinza Claro</option>
         <option value="Amarelo">Amarelo</option>

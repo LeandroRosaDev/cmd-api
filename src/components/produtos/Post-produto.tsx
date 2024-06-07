@@ -119,6 +119,7 @@ export default function PostProduto() {
           <>
             <option value="Balcao de Cozinha">Balcão de cozinha</option>
             <option value="Mesa de aluminio">Mesa de aluminio</option>
+            <option value="Kit de cozinha">Kit Cozinha</option>
           </>
         )}
         {categoriaSelecionada == "Banheiro" && (
@@ -129,12 +130,16 @@ export default function PostProduto() {
         {categoriaSelecionada == "Quarto de casal" && (
           <>
             <option value="Cama de Casal">Cama de Casal</option>
-            <option value="Guarda Roupa Casal">Guarda Roupa Casal</option>
+            <option value="Guarda Roupa Casal">Guarda Roupa Casal</option>{" "}
+            <option value="Base de Casal">Base de Casal</option>
+            <option value="Colchão de Casal">Colchão de Casal</option>
           </>
         )}
         {categoriaSelecionada == "Quarto de solteiro" && (
           <>
             <option value="Cama de Solteiro">Cama de Solteiro</option>
+            <option value="Base de Solteiro">Base de Solteiro</option>
+            <option value="Colchão de Solteiro">Colchão de Solteiro</option>
             <option value="Guarda Roupa Solteiro">Guarda Roupa Solteiro</option>
           </>
         )}

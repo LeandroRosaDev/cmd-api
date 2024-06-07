@@ -109,8 +109,12 @@ const CategoriasPage = ({ params }: PageParams) => {
               Ver detalhes
             </Link>
           </div>
-
-          <button onClick={() => handleDelete(produto.id)}>Deletar</button>
+          <div className={style.infoProdutos}>
+            <h1>{produto?.nome}</h1>
+            <h1>{produto?.disponibilidade}</h1>
+            <h1>{produto?.preco}</h1>
+            <button onClick={() => handleDelete(produto.id)}>Deletar</button>
+          </div>
         </div>
       ))}
     </section>

@@ -20,5 +20,5 @@ export async function postProdutosAction(formData: FormData) {
   );
   await response.json();
 
-  revalidatePath("/produtos");
+  revalidatePath("/categorias");
 }

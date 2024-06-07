@@ -115,6 +115,14 @@ const CategoriasPage = ({ params }: PageParams) => {
             <h1>{produto?.preco}</h1>
             <h1>{produto?.cor}</h1>
             <h1>{produto?.produto_cod}</h1>
+            <h1>Situação do produto: {produto?.situacao}</h1>
+            <a
+              target="blank"
+              href={produto?.link_1}
+              style={{ textAlign: "center" }}
+            >
+              Conferir Link
+            </a>
             <button onClick={() => handleDelete(produto.id)}>Deletar</button>
           </div>
         </div>

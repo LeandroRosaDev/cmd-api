@@ -28,8 +28,11 @@ export default function PostProduto() {
     formData.append("sub_categoria", subcategoriaSelecionada);
     formData.append("descricao", event.currentTarget.descricao.value);
     formData.append("preco", event.currentTarget.preco.value);
-    formData.append("preco_original", event.currentTarget.preco.value);
-    formData.append("preco_parcelado", event.currentTarget.preco.value);
+    formData.append("preco_original", event.currentTarget.preco_original.value);
+    formData.append(
+      "preco_parcelado",
+      event.currentTarget.preco_parcelado.value
+    );
     formData.append("altura", event.currentTarget.altura.value);
     formData.append("largura", event.currentTarget.largura.value);
     formData.append("cor", event.currentTarget.cor.value);

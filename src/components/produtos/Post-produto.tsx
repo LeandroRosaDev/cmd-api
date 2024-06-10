@@ -229,6 +229,7 @@ export default function PostProduto() {
         <option value="Off white">Off white</option>
         <option value="Capuccino">Capuccino</option>
         <option value="Cinza/Grafite">Cinza/Grafite</option>
+        <option value="Mel">Mel</option>
       </select>
       <input
         type="text"
